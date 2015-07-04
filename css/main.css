@@ -1,0 +1,363 @@
+/*
+   Reset by Eric Meyer
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* Enf of Reset */
+
+@font-face {
+   font-family: 'DIN1451StdEngschrift';
+    src: url('../fonts/dinengschriftstd-webfont.eot');
+    src: url('../fonts/dinengschriftstd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dinengschriftstd-webfont.woff') format('woff'),
+         url('../fonts/dinengschriftstd-webfont.ttf') format('truetype'),
+         url('../fonts/dinengschriftstd-webfont.svg#DIN1451StdEngschrift') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html, body { height:100%; overflow:hidden }
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#717171}
+#container{height:100%; width:100%;}
+.clr{clear:both}
+a{text-decoration:none; color:#98bc2c}
+h1,h2,h3,h4,h5,h6, .h1,.h2,.h3,.h4,.h5,.h6{font-family:'DIN1451StdEngschrift','Arial Narrow',Arial, Helvetica, sans-serif; text-transform:uppercase; }
+h1,.h1{font-size:48px; color:#fff}
+h2,.h2{font-size:30px; color:#fff}
+h3,.h3{font-size:24px; color:#8b8d8e; margin:0 0 7px}
+h4,.h4{font-size:18px; color:#fff}
+
+/* HEADER */
+#main-head { position:absolute; top:0; width:100%; z-index:50}
+.bg{ height:104px; background:url(../images/bg_header.png) center top; }
+#logos{width:199px; margin:0 auto; position:relative; z-index:2}
+#logos .logo{position:absolute; top:38px}
+.logo.autodesk{left:-290px}
+.logo.adobe{right:-228px}
+#dialog
+{
+   text-align: center;
+}
+#dialog p
+{
+   margin: 1em;
+}
+#logos .logo.main{position:static; padding:5px 0 0; display:block}
+#logos .logo.main a{display:block; width:199px; height:91px; background:url(../images/logo_area51.png) no-repeat; text-indent:-9999px; outline:none}
+
+#main-head .address{position:absolute; right:50px; top:10px; color:#fff; line-height:18px; font-size:12px}
+#main-head .address em{color:#ccc; font-style:italic}
+
+#main-head .aatc{position:absolute; left:50px; top:10px;  }
+#main-head .aatc a{display:block; width:196px; height:68px; background:url(../images/aatc.png) no-repeat; text-indent:-9999px; outline:none}
+/* End of HEADER */
+
+/* FOOTER */
+footer{text-align:center; background:rgba(0,0,0,0.5); padding:5px 0}
+footer img{margin:0 18px}
+footer{position:absolute; bottom:0; left:0; z-index:1; width:100%}
+
+/* End of FOOTER */
+
+/* NAVIGATION */
+#main-nav{ background:rgba(0,0,0,0.25); position:absolute; z-index:50;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px;padding:3px 8px;top:116px; float:left; overflow:hidden}
+#main-nav a{color:#fff; font-family:'DIN1451StdEngschrift','Arial Narrow',Arial, Helvetica, sans-serif; font-size:17px; text-decoration:none;  float:left; text-transform:uppercase; padding:2px 6px;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px;}
+#main-nav span{background:url(../images/menu-division.png) center center no-repeat; width:1px; height:18px; padding:0 5px; float:left}
+#main-nav a.current,#main-nav a:hover{background:#98bc2c; color:#000}
+/* Enf of NAVIGATION */
+
+/* SLIDES */
+#wrapper{position:absolute; width:100%; height:100%; z-index:1; min-height:600px}
+#slider-holder{height:100%;position:absolute; left:0;}
+.animation{-webkit-transition:all 1.0s ease-in-out;-moz-transition:all 1.0s ease-in-out;-o-transition:all 1.0s ease-in-out;-ms-transition:all 1.0s ease-in-out;	transition:all 1.0s ease-in-out;}
+#slider{overflow:hidden; height:100%; position:relative;}
+#slider-holder section{float:left; position:relative;height:100%}
+.scenario img{position:absolute; bottom:0; left:0; z-index:-1; width:100%}
+#instructors .scenario img{right:0; left:auto}
+#contact img{top:0}
+#contact{position:absolute; left:0; top:0;}
+
+#arrows a{background-repeat:no-repeat; background-image:url(../images/arrows.png); position:absolute; display:block; width:111px; height:151px; text-indent:-9999px; z-index:50; top:40%; outline:none}
+#arr-prev{background-position:0 0; left:0}
+#arr-next{background-position:-111px 0; right:0}
+#arr-prev:hover{background-position:0 -151px;}
+#arr-next:hover{background-position:-111px -151px;}
+/* End of SLIDES */
+
+/* HOME SLIDES */
+#home-slider{width:968px;margin:180px auto 0;}
+#home-slides {width:968px}
+#text-slides{width:395px; float:right; margin:20px 0 0}
+#text-slides h2{margin:0 0 10px}
+#text-slides h2 em{display:block}
+#home-slider .p1{color:#585b5b; font-size:36px; margin:0 0 0 38px}
+#home-slider .p2{color:#8b8d8e; font-size:30px}
+#home-slider .p3{color:#728cbb; font-size:48px; margin:0 0 0 23px}
+/*#benefits .text{border-top:1px dashed #717374;border-bottom:1px dashed #717374}*/
+#benefits .text{ height:260px}
+#benefits .text p{color:#717171; margin:10px 0; line-height:22px; font-size:14px}
+#benefits .text-holder{border-top:1px dashed #717374;border-bottom:1px dashed #717374}
+
+#home-imgs{float:left}
+
+.slider-nav{margin:8px 0 0}
+.slider-nav a{float:left; background:#787878; padding:2px 5px; -webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px; color:#fff; margin:0 3px; font-size:11px}
+.slider-nav a:hover{background:#999}
+.slider-nav a.activeSlide{ background:#98bb2c}
+/* End of HOME SLIDES */
+
+/* INSTRUCTORS SLIDES */
+#instructors-slider{margin: 180px auto 0; width:840px}
+.instructor{margin:0 30px; width:220px; float:left; font-size:11px;line-height:14px}
+.instructor .picture{border:6px solid #fff;display:block;-webkit-box-shadow: 9px 9px 9px 0px rgba(0, 0, 0, 0.2);-moz-box-shadow: 9px 9px 9px 0px rgba(0, 0, 0, 0.2);box-shadow: 9px 9px 9px 0px rgba(0, 0, 0, 0.2);margin:0 0 18px;}
+.instructor h3{margin-left:6px; margin-right:6px}
+.instructor p{background:rgba(255,255,255,0.5); padding:6px;margin-bottom:5px ;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; color:#333}
+.instructor ul{border-top:1px dashed #9d9fa0; padding:6px 0; margin:6px 0}
+.instructor li{float:left; margin:0 3px}
+.instructor li a{display:block; outline:none; height:20px; width:20px; background-repeat:no-repeat; background-image:url(../images/social.png); text-indent:-9999px;-moz-opacity:.50; filter:alpha(opacity=50); opacity:.50; }
+.instructor .ic-twitter{background-position:0 0}
+.instructor .ic-facebook{background-position:0 -30px}
+.instructor .ic-email{background-position:0 -60px}
+.instructor li a:hover{-moz-opacity:1; filter:alpha(opacity=1); opacity:1; }
+#instructors-slider .slider-nav{position:relative; left:-50%; float:right; margin:0 0 20px}
+#instructors-slider .slider-nav a{position:relative; left:50%; }
+/* End of INSTRUCTORS SLIDES */
+
+/* ABOUT */
+#about-content{width:910px;margin: 180px auto 0; }
+#about-imgs{float:right}
+.content-holder{width:450px; float:left; margin:40px 0 0}
+#about-content .text{/*height:150px; overflow:auto*/}
+#about-content .text p{color:#717171; margin:0 0 10px; line-height:18px; font-size:14px; padding:0 15px 0 0}
+.text-box{border-top:1px dotted #5f6465; border-bottom:1px dotted #5f6465; padding:13px 0 5px; /*width:360px*/}
+#about-content h2 em{display:block}
+#about-content .p1{font-size:30px; color:#fff; margin:0 0 0 30px;/*text-shadow: 1px 1px 1px rgba(0,0,0,0.75);filter: dropshadow(color=#000000, offx=1, offy=1);*/ }
+#about-content .p2{font-size:48px; color:#fff}
+#about-content .p2 span{color:#484b4d}
+#about-content .p2 .altcolor{color:#728cbb}
+/* End of ABOUT */
+
+/* CONTACT */
+#contact-content{margin: 180px auto 0; width:618px; color:#fff}
+#contact-info{width:226px; float:left}
+#contact-info h3{margin:0}
+#contact-info p{line-height:18px; margin:3px 0 8px 0;padding:0 0 0 36px;}
+#contact-info .address{ background:url(../images/pin.png) left center no-repeat}
+#contact-info ul{float:left;margin:3px 0 8px 0;padding:0 0 0 36px;}
+#contact-info li{float:left; margin:0 12px 0 0}
+#contact-info li a{display:block; outline:none; height:33px; width:33px; background-repeat:no-repeat; background-image:url(../images/social-bigger.png); text-indent:-9999px;-moz-opacity:.70; filter:alpha(opacity=70); opacity:.70; }
+#contact-info .ic-twitter{background-position:0 0}
+#contact-info .ic-facebook{background-position:0 -43px}
+#contact-info .ic-youtube{background-position:0 -86px}
+#contact-info  li a:hover{-moz-opacity:1; filter:alpha(opacity=1); opacity:1; }
+#contact-form{width:260px; float:right}
+#contact-form label{display:block;}
+#contact-form p{padding:0 0 6px }
+#contact-form input, #contact-form textarea{background:rgba(255,255,255,0.5); border:0; font-size:14px; color:#333;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; padding:5px 8px; resize:none}
+#contact-form input{width:260px;}
+#contact-form textarea{width:260px; height:73px;}
+#contact-form #btnSubmit{width:auto; background:none; color:#fff; font-size:30px; padding:0 22px 0 0; background:url(../images/submit-arrow.png) right center no-repeat;font-family:'DIN1451StdEngschrift','Arial Narrow',Arial, Helvetica, sans-serif; text-transform:uppercase; cursor:pointer}
+.holder{padding:8px 0; border-top:1px dotted #fff; margin:5px 0;}
+/* End of CONTACT */
+
+/* SKY AND CLOUDS */
+#sky{position:absolute; height:100%; width:100%; bottom:0; left:0; z-index:-3px; min-height:1200px;
+background: #273545; /* Old browsers */
+background: -moz-linear-gradient(top,  #273545 0%, #4c6781 30%, #7d98a1 51%, #acbabe 65%, #f2f5f6 92%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#273545), color-stop(30%,#4c6781), color-stop(51%,#7d98a1), color-stop(65%,#acbabe), color-stop(92%,#f2f5f6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #273545 0%,#4c6781 30%,#7d98a1 51%,#acbabe 65%,#f2f5f6 92%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #273545 0%,#4c6781 30%,#7d98a1 51%,#acbabe 65%,#f2f5f6 92%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #273545 0%,#4c6781 30%,#7d98a1 51%,#acbabe 65%,#f2f5f6 92%); /* IE10+ */
+background: linear-gradient(top,  #273545 0%,#4c6781 30%,#7d98a1 51%,#acbabe 65%,#f2f5f6 92%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273545', endColorstr='#f2f5f6',GradientType=0 ); /* IE6-9 */}
+#clouds{background:url(../images/clouds.png) repeat-x; z-index:-2px; width:100%; height:100%; position:absolute; top:0; left:0;}
+
+@-webkit-keyframes float-clouds {
+  0% {
+	  background-position: 2400px 50%;
+  }
+  100% {
+	  background-position: 0 50%;
+  }
+}
+
+#clouds {-webkit-animation-name: float-clouds;-webkit-animation-duration: 95s;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;-moz-animation-name: float-clouds;-moz-animation-duration: 95s;-moz-animation-iteration-count: infinite;-moz-animation-timing-function: linear;}
+/* End of SKY AND CLOUDS */
+
+/* LIONBARS */
+.lb-v-dummy { width: 100%; display: block; height: 1px; }
+.lb-h-dummy { height: 100%; display: block; width: 1px; }
+.lb-clear { clear: both; }
+.lb-wrap { z-index: 0; overflow: auto; position: relative; }
+/*.lb-scrollbar-wrap { position: absolute; left: 0; top: 0; }*/
+.lb-v-scrollbar { z-index: 1; position: absolute; right: 2px; top: 2px; width: 7px; height: 100%; background: #cfcfcf; opacity: 0.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; border-radius: 7px; -webkit-border-radius: 7px; -moz-border-radius: 7px; }
+.lb-h-scrollbar { z-index: 1; position: absolute; bottom: 2px; left: 2px; width: 100%; height: 7px; background: #cfcfcf; opacity: 0.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; border-radius: 7px; -webkit-border-radius: 7px; -moz-border-radius: 7px; }
+.lb-v-scrollbar-slider { position: absolute; width: 7px; height: 50px; left: 0; top: 0; background: #000; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; border-radius: 7px; -webkit-border-radius: 7px; -moz-border-radius: 7px; }
+.lb-h-scrollbar-slider { position: absolute; height: 7px; width: 50px; left: 0; top: 0; background: #000; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; border-radius: 7px; -webkit-border-radius: 7px; -moz-border-radius: 7px; }
+
+/* Enf of LIONBARS */
+
+#responses .response{padding:5px 10px;width:400px; font-size:13px; color:#333}
+#responses a{text-decoration:underline; color:#333}
+#error-response{background:#fedfd6; border:1px solid #fca890}
+#success-response{background:#d6fee3; border:1px solid #aefdc7}
+
+
+
+/* @otakurzo */
+
+/* #COURSES */
+#courses-slider{margin: 156px auto 0; width:826px}
+
+#courses-slider .courses-header {
+  background:#e1e1e2;
+  height:130px;
+
+  overflow:hidden;
+  position:relative;
+}
+#courses-slider .courses-header img {
+  display:none;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+#courses-slider .courses-header,
+#courses-slider .courses-header img {
+  -webkit-border-radius:12px 12px 0 0;
+  -moz-border-radius:12px 12px 0 0;
+  border-radius:12px 12px 0 0;
+}
+
+#courses-slider .courses-container {
+  background:#e1e1e2;
+  border:1px solid #c8c8c9;
+  border-top:none;
+  height:216px;
+  padding:25px 25px 25px 27px; /* 54px */
+  overflow:hidden;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size:13px;
+}
+  #courses-slider .courses-container h2,#courses-slider .courses-container h3 {
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-weight:normal;
+    font-size:24px;
+    line-height:1em;
+    color:#000;
+    margin-bottom:13px;
+  }
+  #courses-slider .courses-container h3 {font-size:17px}
+  #courses-slider .courses-container p{
+    line-height:1.4em;
+    margin-bottom:1em;
+  }
+  .courses-container .col2 ul{margin:0 0 0 15px}
+  .courses-container .col2 li {line-height:1.4em; margin-bottom:5px; list-style-type:disc;}
+
+  #courses-slider .courses-container .courses-sidebar,
+  #courses-slider .courses-container .courses-content {
+    height:212px;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+  
+  #courses-slider .courses-container .courses-content {overflow:auto}
+
+  #courses-slider .courses-container .courses-sidebar {
+    width:150px;
+    float:left;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  }
+    #courses-slider .courses-container .courses-sidebar ul {
+      margin-right:7px;
+    }
+    #courses-slider .courses-container .courses-sidebar ul li {
+      margin-bottom:1px;
+    }
+    #courses-slider .courses-container .courses-sidebar ul li a {
+      display:block;
+      background:transparent url(../images/courses/list-icon-arrow.png) no-repeat center right;
+      padding:3px;
+      color:#939393;
+      -webkit-border-radius:3px;
+      -moz-border-radius:3px;
+      border-radius:3px;
+      outline:none;
+      line-height:1em;
+    }
+
+    #courses-slider .courses-container .courses-sidebar ul li a.active,
+    #courses-slider .courses-container .courses-sidebar ul li a:hover {
+      background-color:rgba(255,255,255,0.5);
+      opacity:0.6;
+      color:#333;
+    }
+    #courses-slider .courses-container .courses-sidebar ul li a.active {
+      color:#111;
+
+      -webkit-box-shadow:0 1px 0 #fff;
+      -moz-box-shadow:0 1px 0 #fff;
+      box-shadow:0 1px 0 #fff;
+      padding-left:4px;
+      opacity:0.8;
+    }
+  
+
+  #courses-slider .courses-container .courses-content {
+    width:590px;
+    float:right;
+    position:relative;
+  }
+  #courses-slider .courses-container .courses-content .courses-content-inner{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    display:none;
+  }
+
+    #courses-slider .courses-container .courses-content .col1 {
+      float:left;
+      width:270px;
+      margin-right:25px;
+    }
+    #courses-slider .courses-container .courses-content .col2 {
+      float:left;
+      width:250px;
+      padding-left:25px;
+      border-left:1px dotted #999;
+    }
+
+  /* /#COURSES */
+
+/* @otakurzo */

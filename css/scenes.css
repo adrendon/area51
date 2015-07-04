@@ -1,0 +1,57 @@
+#sc1-arbol
+{
+	width: auto;
+	margin-bottom: -14px;
+	position: absolute;
+	bottom: 100%;
+	right: -1.1%;
+}
+#sc2-danger
+{
+	float: left;
+	width: 21.4%;
+	margin: 0 0 2px 1px;
+}
+#sc4-bottom
+{
+	
+}
+#sc4-col-l
+{
+	position: absolute;
+	top: 23.3%;
+	width: 43%;
+}
+	#sc4-top-left
+	{
+	}
+#sc4-col-r
+{
+	margin-left: 43%;
+	width: 57.1%;
+	
+}
+	#sc4-medium-right
+	{		
+	}
+	#sc4-top-rigth
+	{
+	}
+
+.escenario
+{
+	width: 100%;
+	position: absolute;
+	bottom: -15%;
+	z-index: 5;
+}
+.escenario img
+{
+	width: 100%;
+	margin: -2px 0 0;
+}
+.slider
+{
+	position: relative;
+	z-index:30;
+}
